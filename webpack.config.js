@@ -10,13 +10,15 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.bundle.js'
   },
+  externals: {
+    'web3-bzz': '{}'
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
         options: babelOptions,
-        exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
   },
