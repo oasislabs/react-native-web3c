@@ -1,5 +1,5 @@
 {
-  "presets": ["react-native"],
+  "presets": ["react-native", "module:metro-react-native-babel-preset"],
   "plugins": [
     ["babel-plugin-rewrite-require", {
       "aliases": {

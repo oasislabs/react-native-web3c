@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs');
+const babelOptions = JSON.parse(fs.readFileSync('.babelrc'));
 
 module.exports = {
   target: 'node',
@@ -13,10 +15,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        query: {
-          presets: ["module:metro-react-native-babel-preset"]
-        },
-		exclude: path.resolve(__dirname, 'node_modules')
+        options: babelOptions,
+        exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
   },
