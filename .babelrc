@@ -1,0 +1,12 @@
+{
+  "presets": ["react-native"],
+  "plugins": [
+    ["babel-plugin-rewrite-require", {
+      "aliases": {
+	  	  "crypto": "react-native-crypto",
+		  "randombytes": "react-native-randombytes",
+		  "path" : "path-browserify"
+      }
+    }]
+  ]
+}
