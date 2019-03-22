@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const fs = require('fs');
-const babelOptions = JSON.parse(fs.readFileSync('.babelrc'));
 
 module.exports = {
   target: 'node',
@@ -11,14 +10,29 @@ module.exports = {
     filename: 'app.bundle.js'
   },
   externals: {
-    'web3-bzz': '{}'
+    'web3-bzz': '{}',
+    'react-native': 'react-native'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        options: babelOptions,
+        options: {
+          presets: [
+            "react-native",
+            "module:metro-react-native-babel-preset"
+          ],
+          plugins: [
+            ["babel-plugin-rewrite-require", {
+              "aliases": {
+                "crypto": "react-native-crypto",
+                "randombytes": "react-native-randombytes",
+                "path" : "path-browserify"
+              }
+            }]
+          ]
+        }
       }
     ]
   },
@@ -27,10 +41,9 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-	alias: {
-	  "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
-	  "path": path.resolve(__dirname, "node_modules/path-browserify")
-	}
+    alias: {
+      "scrypt": path.resolve(__dirname, "node_modules/scrypt.js")
+    }
   },
   plugins: [
     // ignore these plugins completely

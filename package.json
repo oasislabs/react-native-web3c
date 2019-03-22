@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run webpack && post_webpack.sh",
+    "build": "npm run webpack && ./post_webpack.sh",
     "webpack": "webpack",
     "clean": "rm -rf build"
   },
   "author": "",
   "dependencies": {
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-cli": "^6.26.0",
     "node-loader": "^0.6.0",
     "path-browserify": "^1.0.0",
     "web3": "1.0.0-beta.37",
