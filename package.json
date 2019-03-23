@@ -4,20 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run webpack && ./post_webpack.sh",
+    "build": "npm run clean && npm run webpack",
     "webpack": "webpack",
-    "clean": "rm -rf build"
+    "clean": "rm index.js*"
   },
   "author": "",
-  "dependencies": {
+  "devDependencies": {
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "babel-cli": "^6.26.0",
     "node-loader": "^0.6.0",
     "path-browserify": "^1.0.0",
     "web3": "1.0.0-beta.37",
-    "web3c": "^2.0.4"
-  },
-  "devDependencies": {
+    "web3c": "^2.0.4",
     "@babel/core": "^7.1.6",
     "@babel/runtime": "^7.4.2",
     "babel-loader": "^8.0.4",
@@ -28,6 +26,18 @@
     "react-native-crypto": "^2.1.2",
     "react-native-randombytes": "^3.5.2",
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "stream-browserify": "^1.0.0",
+    "react-native-level-fs": "^3.0.1",
+    "asyncstorage-down": "^4.1.2",
+    "react-native-tcp": "^3.3.0",
+    "react-native-os": "^1.2.2"
+  },
+  "dependencies": {
+    "@tradle/react-native-http": "^2.0.1",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "0.0.1",
+    "tty-browserify": "0.0.1",
+    "vm-browserify": "^1.1.0"
   }
 }
