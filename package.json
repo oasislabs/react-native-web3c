@@ -31,7 +31,8 @@
     "react-native-level-fs": "^3.0.1",
     "asyncstorage-down": "^4.1.2",
     "react-native-tcp": "^3.3.0",
-    "react-native-os": "^1.2.2"
+    "react-native-os": "^1.2.2",
+    "eth-lib": "https://github.com/willscott/eth-lib.git"
   },
   "dependencies": {
     "@tradle/react-native-http": "^2.0.1",

@@ -12,11 +12,12 @@ module.exports = {
   output: {
     path: __dirname,
     library: 'Web3c',
+	libraryTarget: 'commonjs2',
     filename: 'index.js'
   },
   externals: {
-    'web3-bzz': 'react-native',
-    'react-native': 'react-native'
+	'web3-bzz': 'global',
+	'react-native': 'react-native'
   },
   module: {
     rules: [
@@ -57,7 +58,8 @@ module.exports = {
   resolve: {
     alias: {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
-	  "crypto": path.resolve(__dirname, "node_modules/react-native-crypto")
+	  "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
+	  'react-native': path.resolve(__dirname, 'node_modules/react-native'),
     }
   },
   plugins: [
