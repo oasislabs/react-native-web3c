@@ -21,5 +21,6 @@ const bSign = require('browserify-sign');
 const ethlib = require('eth-lib');
 const crypto = require('react-native-crypto');
 const stream = require('stream-browserify');
-const web3 = require('web3');
+const Web3 = require('web3');
+global.Web3 = Web3;
 module.exports = require('web3c');
