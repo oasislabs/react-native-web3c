@@ -16,8 +16,7 @@ module.exports = {
     filename: 'index.js'
   },
   externals: {
-	'react-native': 'react-native',
-	'web3-bzz': 'web3-bzz'
+	'react-native': 'react-native'
   },
   module: {
     rules: [
@@ -42,7 +41,14 @@ module.exports = {
 				"tty": "tty-browserify",
 				"fs": "react-native-level-fs",
 				"net": "react-native-tcp",
-				"os": "react-native-os"
+				"os": "react-native-os",
+				"eth-lib": "oasis-eth-lib",
+				"zlib": "browserify-zlib",
+				"_stream_transform": "readable-stream/transform",
+				"_stream_readable": "readable-stream/readable",
+				"_stream_writable": "readable-stream/writable",
+				"_stream_duplex": "readable-stream/duplex",
+				"_stream_passthrough": "readable-stream/passthrough",
               },
 			  "throwForNonStringLiteral": true
             }]
@@ -60,9 +66,10 @@ module.exports = {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
 	  "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
 	  'react-native': path.resolve(__dirname, 'node_modules/react-native'),
-	  'web3-bzz': path.resolve(__dirname, 'node_modules/web3-eth'),
-	  'eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
+	  'web3-bzz': path.resolve(__dirname, 'web3-bzz'),
+	  'oasis-eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
 	  'react-native-crypto': path.resolve(__dirname, 'node_modules/react-native-crypto'),
+	  'stream': path.resolve(__dirname, 'node_modules/stream-browserify'),
     }
   },
   plugins: [
