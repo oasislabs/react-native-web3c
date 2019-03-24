@@ -16,8 +16,8 @@ module.exports = {
     filename: 'index.js'
   },
   externals: {
-	'web3-bzz': 'global',
-	'react-native': 'react-native'
+	'react-native': 'react-native',
+	'web3-bzz': 'web3-bzz'
   },
   module: {
     rules: [
@@ -60,6 +60,9 @@ module.exports = {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
 	  "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
 	  'react-native': path.resolve(__dirname, 'node_modules/react-native'),
+	  'web3-bzz': path.resolve(__dirname, 'node_modules/web3-eth'),
+	  'eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
+	  'react-native-crypto': path.resolve(__dirname, 'node_modules/react-native-crypto'),
     }
   },
   plugins: [
