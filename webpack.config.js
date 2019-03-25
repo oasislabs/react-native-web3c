@@ -64,16 +64,10 @@ module.exports = {
   resolve: {
     alias: {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
-      "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
-      'react-native': path.resolve(__dirname, 'node_modules/react-native'),
-      'web3-bzz': path.resolve(__dirname, 'web3-bzz'),
-      'oasis-eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
-      'react-native-crypto': path.resolve(__dirname, 'node_modules/react-native-crypto'),
-      'stream': path.resolve(__dirname, 'node_modules/stream-browserify'),
+      'web3-bzz': path.resolve(__dirname, 'web3-bzz')
     }
   },
   plugins: [
-    // ignore these plugins completely
     new webpack.IgnorePlugin(/^(?:electron|ws)$/)
   ]
 };
