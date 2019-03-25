@@ -43,8 +43,5 @@
     "web3c": "^2.0.4",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
-  },
-  "resolutions": {
-    "**/eth-lib": "file:/Users/armaniferrante/Documents/code/src/github.com/oasislabs/eth-lib"
   }
 }

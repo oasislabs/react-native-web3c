@@ -14,11 +14,9 @@ if (typeof atob === 'undefined') {
   };
 }
 
-const Web3 = require('web3');
-
 // Dynamic module loading (e.g., via require.ensure) isn't supported in react-native.
 // So ensure Web3 is available in the global namespace so that web3c.js can pick it
 // up.
-global.Web3 = Web3;
+global.Web3 = require('web3');
 
 module.exports = require('web3c');
