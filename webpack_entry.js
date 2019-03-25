@@ -1,5 +1,3 @@
-require('node-libs-react-native/globals');
-
 // Inject node globals into React Native global scope.
 global.Buffer = require('buffer').Buffer;
 global.process = require('process');
@@ -16,11 +14,11 @@ if (typeof atob === 'undefined') {
   };
 }
 
-const web3bzz = require('./web3-bzz');
-const bSign = require('browserify-sign');
-const ethlib = require('eth-lib');
-const crypto = require('react-native-crypto');
-const stream = require('stream-browserify');
 const Web3 = require('web3');
+
+// Dynamic module loading (e.g., via require.ensure) isn't supported in react-native.
+// So ensure Web3 is available in the global namespace so that web3c.js can pick it
+// up.
 global.Web3 = Web3;
+
 module.exports = require('web3c');

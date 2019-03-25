@@ -5,18 +5,18 @@ const fs = require('fs');
 module.exports = {
   optimization: {
     minimize: false,
-	namedModules: true
+    namedModules: true
   },
   target: 'node',
   entry: './webpack_entry.js',
   output: {
     path: __dirname,
     library: 'Web3c',
-	libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2',
     filename: 'index.js'
   },
   externals: {
-	'react-native': 'react-native'
+    'react-native': 'react-native'
   },
   module: {
     rules: [
@@ -36,21 +36,21 @@ module.exports = {
                 "path": "path-browserify",
                 "http": "@tradle/react-native-http",
                 "https": "https-browserify",
-				"stream": "stream-browserify",
-				"vm": "vm-browserify",
-				"tty": "tty-browserify",
-				"fs": "react-native-level-fs",
-				"net": "react-native-tcp",
-				"os": "react-native-os",
-				"eth-lib": "oasis-eth-lib",
-				"zlib": "browserify-zlib",
-				"_stream_transform": "readable-stream/transform",
-				"_stream_readable": "readable-stream/readable",
-				"_stream_writable": "readable-stream/writable",
-				"_stream_duplex": "readable-stream/duplex",
-				"_stream_passthrough": "readable-stream/passthrough",
+                "stream": "stream-browserify",
+                "vm": "vm-browserify",
+                "tty": "tty-browserify",
+                "fs": "react-native-level-fs",
+                "net": "react-native-tcp",
+                "os": "react-native-os",
+                "eth-lib": "oasis-eth-lib",
+                "zlib": "browserify-zlib",
+                "_stream_transform": "readable-stream/transform",
+                "_stream_readable": "readable-stream/readable",
+                "_stream_writable": "readable-stream/writable",
+                "_stream_duplex": "readable-stream/duplex",
+                "_stream_passthrough": "readable-stream/passthrough",
               },
-			  "throwForNonStringLiteral": true
+              "throwForNonStringLiteral": true
             }]
           ]
         }
@@ -64,12 +64,12 @@ module.exports = {
   resolve: {
     alias: {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
-	  "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
-	  'react-native': path.resolve(__dirname, 'node_modules/react-native'),
-	  'web3-bzz': path.resolve(__dirname, 'web3-bzz'),
-	  'oasis-eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
-	  'react-native-crypto': path.resolve(__dirname, 'node_modules/react-native-crypto'),
-	  'stream': path.resolve(__dirname, 'node_modules/stream-browserify'),
+      "crypto": path.resolve(__dirname, "node_modules/react-native-crypto"),
+      'react-native': path.resolve(__dirname, 'node_modules/react-native'),
+      'web3-bzz': path.resolve(__dirname, 'web3-bzz'),
+      'oasis-eth-lib': path.resolve(__dirname, 'node_modules/eth-lib'),
+      'react-native-crypto': path.resolve(__dirname, 'node_modules/react-native-crypto'),
+      'stream': path.resolve(__dirname, 'node_modules/stream-browserify'),
     }
   },
   plugins: [

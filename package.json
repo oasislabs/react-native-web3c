@@ -26,7 +26,6 @@
     "eth-lib": "file:/Users/armaniferrante/Documents/code/src/github.com/oasislabs/eth-lib",
     "https-browserify": "0.0.1",
     "metro-react-native-babel-preset": "^0.53.1",
-    "node-libs-react-native": "^1.0.3",
     "node-loader": "^0.6.0",
     "path-browserify": "^1.0.0",
     "react-native-crypto": "^2.1.2",
