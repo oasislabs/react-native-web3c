@@ -14,6 +14,8 @@ react-native link react-native-randombytes
 
 After installing, you can use web3c.js in your react-native app like you would any other library.
 
+If you find the Metro Bundler running out of memory, increase node's memory using the `--max-old-space-size=8192` flag.
+
 ## Build
 
 To build a new version of react-native-web3c, run
