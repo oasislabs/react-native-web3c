@@ -1,7 +1,7 @@
 {
   "name": "react-native-web3c",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React Native shim for web3c.js",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",

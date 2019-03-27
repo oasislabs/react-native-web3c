@@ -7,8 +7,8 @@ react-native-web3c is a shim for [web3c.js](https://github.com/oasislabs/web3c.j
 When including web3c.js in a react-native project, make sure to install and link the native randombytes, which is needed for the underlying crypto modules used by web3c.js.
 
 ```
-yarn install react-native-web3c
-yarn install react-native-randombytes
+yarn add react-native-web3c
+yarn add react-native-randombytes
 react-native link react-native-randombytes
 ```
 
