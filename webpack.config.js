@@ -48,7 +48,6 @@ module.exports = {
                 "fs": "react-native-level-fs",
                 "net": "react-native-tcp",
                 "os": "react-native-os",
-                "eth-lib": "oasis-eth-lib",
                 "zlib": "browserify-zlib",
                 "_stream_transform": "readable-stream/transform",
                 "_stream_readable": "readable-stream/readable",

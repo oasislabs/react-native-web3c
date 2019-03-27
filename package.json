@@ -35,7 +35,6 @@
     "browserify-zlib": "^0.1.4",
     "buffer": "^5.2.1",
     "constants-browserify": "^1.0.0",
-    "eth-lib": "file:/Users/armaniferrante/Documents/code/src/github.com/oasislabs/eth-lib",
     "events": "^1.0.0",
     "https-browserify": "0.0.1",
     "metro-react-native-babel-preset": "^0.53.1",
