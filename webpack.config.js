@@ -4,8 +4,7 @@ const fs = require('fs');
 
 module.exports = {
   optimization: {
-    minimize: false,
-    namedModules: true
+    minimize: true
   },
   target: 'web',
   entry: './webpack_entry.js',
