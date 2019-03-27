@@ -19,4 +19,4 @@ if (typeof atob === 'undefined') {
 // up.
 global.Web3 = require('web3');
 
-module.exports = require('web3c');
+module.exports = require('web3c/index.node.js');

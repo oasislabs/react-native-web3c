@@ -3,8 +3,9 @@
 ## Instructions
 
 ```
+git clone https://github.com/oasislabs/react-native-web3c.git
 npm install
-npm run build
+npm run webpack
 ```
 
-After building the index.js should be populated with the webpacked version of web3c to be used in react-native.
+After running webpack, the index.js should be populated with the new version of web3c.js to be used in react-native.

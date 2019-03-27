@@ -7,7 +7,7 @@ module.exports = {
     minimize: false,
     namedModules: true
   },
-  target: 'node',
+  target: 'web',
   entry: './webpack_entry.js',
   output: {
     path: __dirname,
@@ -31,7 +31,13 @@ module.exports = {
           plugins: [
             ["babel-plugin-rewrite-require", {
               "aliases": {
+                "assert": "local-assert",
+                "buffer": "local-buffer",
+                "constants": "constants-browserify",
                 "crypto": "react-native-crypto",
+                "events": "local-events",
+                "inherits": "local-inherits",
+                "url": "local-url",
                 "randombytes": "react-native-randombytes",
                 "path": "path-browserify",
                 "http": "@tradle/react-native-http",
@@ -49,6 +55,7 @@ module.exports = {
                 "_stream_writable": "readable-stream/writable",
                 "_stream_duplex": "readable-stream/duplex",
                 "_stream_passthrough": "readable-stream/passthrough",
+                "querystring": "querystring-es3",
               },
               "throwForNonStringLiteral": true
             }]
@@ -64,7 +71,12 @@ module.exports = {
   resolve: {
     alias: {
       "scrypt": path.resolve(__dirname, "node_modules/scrypt.js"),
-      'web3-bzz': path.resolve(__dirname, 'web3-bzz')
+      'web3-bzz': path.resolve(__dirname, 'web3-bzz'),
+      'local-assert': path.resolve(__dirname, 'node_modules/assert'),
+      'local-buffer': path.resolve(__dirname, 'node_modules/buffer'),
+      'local-events': path.resolve(__dirname, 'node_modules/events'),
+      "local-url": path.resolve(__dirname, "node_modules/url"),
+      'local-inherits': path.resolve(__dirname, "node_modules/inherits")
     }
   },
   plugins: [
