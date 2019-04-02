@@ -16,6 +16,36 @@ After installing, you can use web3c.js in your react-native app like you would a
 
 If you find the Metro Bundler running out of memory, increase node's memory using the `--max-old-space-size=8192` flag.
 
+## Persisting Key Manager Keys
+
+When instantiating your `web3c` object, be sure to pass in the platform specific persistent storage you'd like to use. An in memory version of this interface is as follows:
+
+```
+class Storage {
+
+  constructor() {
+    this.db = new Map();
+  }
+
+  getItem(key) {
+    return this.db.get(key);
+  }
+
+  setItem(key, val) {
+    this.db.set(key, val);
+  }
+
+}
+```
+
+Then when instantiating your web3c object, pass it in as part of options.
+
+```
+let web3c = new Web3c('https://web3.oasiscloud.io:443', undefined, {
+  storage: new Storage()
+});
+```
+
 ## Build
 
 To build a new version of react-native-web3c, run
