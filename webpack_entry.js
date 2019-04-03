@@ -1,6 +1,7 @@
 // Inject node globals into React Native global scope.
 global.Buffer = require('buffer').Buffer;
 global.process = require('process');
+global.URL = require('url').Url;
 
 if (typeof btoa === 'undefined') {
   global.btoa = function (str) {
